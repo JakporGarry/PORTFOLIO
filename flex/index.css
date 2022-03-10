@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+.header {
+    height: 50px;
+  }
+  
+  .body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    margin: auto;
+    background: yellow;
+    gap: 2rem;
+    
+  }
+ 
+  .sidebar {
+    background: red;
+  }
+  .sidebar-header {
+    width: 200px;
+    height: 80vh;
+    margin-left: 100px;
+    background: green;
+    margin-top: 10vh;
+  }
+
+  .page-header {
+    height: 50px;
+    background: yellow;
+  }
+
+  .main {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    background: lawngreen;
+  }
+  
+  .content {  
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    background: blue;
+  }
+ 
+  .box {
+    margin-top: 10vh;
+    width:100%;
+    margin-right: 100PX;
+    min-height: min-content; /* needs vendor prefixes */
+    background: rgb(4, 4, 31);
+}
+  .column {
+    min-height: 80vh;
+    width: 100%;
+    background: pink;
+    margin:10vh 0;
+    border-right: 1px solid #999;
+  }
+
+  .column:nth-child(1) {
+  margin-top:0;
+  }
