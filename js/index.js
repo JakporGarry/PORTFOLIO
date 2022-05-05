@@ -276,14 +276,14 @@ function Roll() {
   })
 };
 
-/*
+
 var intersectionObserver = new IntersectionObserver(entries => {
   if (entries.some(entry => entry.intersectionRatio > 0)) {
     Roll();
-  }
+  } 
 });
 
-intersectionObserver.observe(watcher);*/
+intersectionObserver.observe(watcher);
 
 
 
@@ -292,17 +292,19 @@ const nav = document.querySelector('.navigation');
 const headerContainer = document.querySelector('.header-container')
 const offset = nav.getBoundingClientRect();
 
-window.addEventListener('scroll', function() {
-if (window.pageYOffset > offset.top) {  
-    headerContainer.classList.add("nav-fixed-top");
-    showNavMenu.style.width = 100 + "%";
-    } else {
-    headerContainer.classList.remove("nav-fixed-top");
-    showNavMenu.style.width = "" ;
-    }
-  });
-
-
+function fixedNav(){
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > offset.top) {  
+        headerContainer.classList.add("nav-fixed-top");
+        showNavMenu.style.width = 100 + "%";
+        } else {
+        headerContainer.classList.remove("nav-fixed-top");
+        showNavMenu.style.width = "" ;
+        }
+    });
+ }
+ fixedNav()
+ 
 
   let button = document.querySelectorAll(".mobile-menu a");
   let content_inside = document.querySelectorAll(".content_inside");
@@ -321,6 +323,13 @@ if (window.pageYOffset > offset.top) {
       button[i].classList.add("button_active");
  
       content_inside[i].classList.add("content_inside_active");
+       
+      window.scrollTo(0, 0);
+    
+      headerContainer.classList.remove("nav-fixed-top");
+      showNavMenu.style.width = "" ;
+      
+      // location.reload(true);
     });
   });
  
