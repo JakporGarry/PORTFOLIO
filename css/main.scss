@@ -127,7 +127,7 @@ li {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  transition: all 700ms ease;
+  transition: all 700ms ease-in;
 }
 
 .page {
@@ -312,6 +312,23 @@ li {
     h1 {
       font-size: clamp(0.5rem, 2rem + #{$a}, 2.5rem);
       text-align: center;
+      color: white;
+      background:url('https://thumbs.dreamstime.com/b/tropical-flower-pattern-seamless-flowers-blossom-flowers-nature-background-vector-illustration-61142748.jpg');
+       background-size: auto 200%;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 8s linear infinite;
+     
+      @keyframes shine {
+        from {
+          background-position: center 0;
+        }
+        to {
+          background-position: center 200%;
+        }
+      }
     }
     h1,
     p,
@@ -501,6 +518,7 @@ li {
       }
     }
   }
+  
   .header-container .social{
   margin-top:1.5em;
   .social-icons{
@@ -683,9 +701,10 @@ form {
     outline: none;
     width: 100%;
     margin: 1em 0;
-    background: var(--bg-net);
     padding: 1em;
+    background: var(--bg-net);
     caret-color: var(--bg-wht);
+    color: var(--bg-wht);
     border-radius: 0.3em;
     border: 0.1px solid rgba(36, 35, 35, 1);
     &::placeholder {
@@ -746,6 +765,7 @@ form {
   position: relative;
   margin-top:4em;
 }
+
 .count-up {
   display:flex;
   flex-direction: column;
@@ -791,3 +811,4 @@ form {
     margin:0;
   }
 }
+
