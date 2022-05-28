@@ -181,7 +181,7 @@ function changeImg(){
   setTimeout("changeImg()", time)
 }
 
-window.onload = changeImg()
+//window.onload = changeImg()
 
 
 var text = "Emumejakpor Oghenegare"
