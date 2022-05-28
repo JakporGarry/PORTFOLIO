@@ -1,4 +1,17 @@
-particlesJS('particles-js',
+
+function offParticles () {
+  particlesJS('particles-js', 
+  {
+    "particles": {
+      "number": {
+        "value": 0,
+        }
+      }
+    }
+  )
+}
+function particles () {
+  particlesJS('particles-js',
   
   {
     "particles": {
@@ -118,8 +131,7 @@ particlesJS('particles-js',
   }
 
 );
-
-
+}
 /*
 console.log(window.getComputedStyle(document.documentElement).getPropertyValue("--text", "blue"))
 
@@ -183,13 +195,7 @@ function typing() {
 window.onload = typing()
 
 
-//If innerwidth is less than 832 nad inner height is less than 422 let hero be 80vh else let it be 80%
 
-var h = window.innerHeight
-|| document.documentElement.clientHeight
-|| document.body.clientHeight;
-
-console.log(h)
 
 
 function getViewport() {
@@ -221,105 +227,115 @@ return [viewPortWidth, viewPortHeight];
 
 window.onload = getViewport()
 
-
-if(window.NodeList && !NodeList.prototype.forEach){
-NodeList.prototype.forEach = Array.prototype.forEach;
+function HamburgerControl(){
+  if(window.NodeList && !NodeList.prototype.forEach){
+    NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+    
+    //HAMBURGER
+    const menuBtn = document.querySelector(".menu-btn");
+    let showNavMenu = document.querySelector(".mobile-nav-menu");
+    let menuClose = document.querySelectorAll(".menuLink");
+    
+    
+    function togglehamburger() {
+    menuBtn.classList.toggle("open"); //to toggle menu button animation
+    showNavMenu.classList.toggle("show"); // to show nav
+    }
+    menuBtn.addEventListener("click", () => {
+    togglehamburger();
+    });
+    
+    menuClose.forEach( 
+    function(menuLink) { 
+      menuLink.addEventListener("click", togglehamburger) 
+    }
+    );
+    
+    //if screen width is bigger than 768px close hamburger
+    
+    var logWidth = function () {
+    var viewportWidth;
+    viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth > 900) {
+      menuBtn.classList.remove("open"); //to toggle menu button animation
+      showNavMenu.classList.remove("show"); // to show nav
+    }
+    if (viewportWidth > 500) {
+      particles ()
+    }else{
+      offParticles ()
+    }
+  }
+    
+    // On resize events, recalculate and log
+    window.addEventListener('resize', function () {
+    logWidth();
+    }, false);
+    
 }
+HamburgerControl()
 
-//HAMBURGER
-const menuBtn = document.querySelector(".menu-btn");
-let showNavMenu = document.querySelector(".mobile-nav-menu");
-let menuClose = document.querySelectorAll(".menuLink");
-
-
-function togglehamburger() {
-menuBtn.classList.toggle("open"); //to toggle menu button animation
-showNavMenu.classList.toggle("show"); // to show nav
-}
-menuBtn.addEventListener("click", () => {
-togglehamburger();
-});
-
-menuClose.forEach( 
-function(menuLink) { 
-  menuLink.addEventListener("click", togglehamburger) 
-}
-);
-
-//if screen width is bigger than 768px close hamburger
-
-var logWidth = function () {
-var viewportWidth;
-viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-if (viewportWidth > 770) {
-  menuBtn.classList.remove("open"); //to toggle menu button animation
-  showNavMenu.classList.remove("show"); // to show nav
-} else{
-  content_inside_active
-}
-}
-
-// On resize events, recalculate and log
-window.addEventListener('resize', function () {
-logWidth();
-}, false);
-
-
-//COUNTER
+function counterControl(){
+//counters
 var watcher = document.querySelector(".counters")
 var counters = document.querySelectorAll(".counter")
 var speed = 200;
 
-function Roll() {
-  counters.forEach(counter =>{
-  const updateCount = () => {
-  const target = +counter.getAttribute("data-target");
-  const count = +counter.innerText;
-  const inc = target / speed;
+function counterRoll() {
+    counters.forEach(counter =>{
+    const updateCount = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+    const inc = target / speed;
 
-    if(count < target) {
-      counter.innerText = Math.ceil(count + inc);
-      setTimeout(updateCount, 1)
-    } else{
-      count.innerText = target;
+      if(count < target) {
+        counter.innerText = Math.ceil(count + inc);
+        setTimeout(updateCount, 200)
+      } else{
+        count.innerText = target;
+      }
     }
-  }
-  updateCount ();
-})
+    updateCount ();
+  })
 };
 
-
 var intersectionObserver = new IntersectionObserver(entries => {
-if (entries.some(entry => entry.intersectionRatio > 0)) {
-  Roll();
-} 
+ 
+  if (entries.some(entry => entry.intersectionRatio > 0)) {
+    counterRoll();
+  }
 });
 
 intersectionObserver.observe(watcher);
 
+}
+
+window.onload = counterControl()
 
 
 
-const nav = document.querySelector('.navigation');
-const headerContainer = document.querySelector('.header-container')
-const offset = nav.getBoundingClientRect();
 
 function fixedNav(){
-window.addEventListener('scroll', function() {
-  if (window.pageYOffset > offset.top) {  
-      headerContainer.classList.add("nav-fixed-top");
-      showNavMenu.style.width = 100 + "%";
-      } else {
-      headerContainer.classList.remove("nav-fixed-top");
-      showNavMenu.style.width = "" ;
-      }
-  });
-}
+  const nav = document.querySelector('.navigation');
+  const headerContainer = document.querySelector('.header-container')
+  const offset = nav.getBoundingClientRect();
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > offset.top) {  
+        headerContainer.classList.add("nav-fixed-top");
+        showNavMenu.style.width = 100 + "%";
+        } else {
+        headerContainer.classList.remove("nav-fixed-top");
+        showNavMenu.style.width = "" ;
+        }
+    });
+  }
 fixedNav()
 
+function MobileMenuChange(){
+  let button = document.querySelectorAll(".mobile-menu a");
+  let content_inside = document.querySelectorAll(".content_inside");
 
-let button = document.querySelectorAll(".mobile-menu a");
-let content_inside = document.querySelectorAll(".content_inside");
 
 Array.from(button).forEach(function (buttonArray, i) {
   
@@ -343,5 +359,7 @@ Array.from(button).forEach(function (buttonArray, i) {
     
     // location.reload(true);
   });
-});
+}); 
+}
 
+MobileMenuChange()
