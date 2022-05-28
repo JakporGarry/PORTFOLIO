@@ -227,7 +227,7 @@ return [viewPortWidth, viewPortHeight];
 
 window.onload = getViewport()
 
-function HamburgerControl(){
+
   if(window.NodeList && !NodeList.prototype.forEach){
     NodeList.prototype.forEach = Array.prototype.forEach;
     }
@@ -260,7 +260,6 @@ function HamburgerControl(){
     if (viewportWidth > 900) {
       menuBtn.classList.remove("open"); //to toggle menu button animation
       showNavMenu.classList.remove("show"); // to show nav
-      particles ()
     }
     if (viewportWidth > 500) {
       particles ()
@@ -274,8 +273,7 @@ function HamburgerControl(){
     logWidth();
     }, false);
     
-}
-HamburgerControl()
+
 
 function counterControl(){
 //counters
