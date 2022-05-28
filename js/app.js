@@ -132,7 +132,8 @@ function particles () {
 
 );
 }
-particles()
+
+
 /*
 console.log(window.getComputedStyle(document.documentElement).getPropertyValue("--text", "blue"))
 
@@ -228,7 +229,7 @@ return [viewPortWidth, viewPortHeight];
 
 window.onload = getViewport()
 
-function HamburgerControl(){
+function hamburgerControl(){
   if(window.NodeList && !NodeList.prototype.forEach){
     NodeList.prototype.forEach = Array.prototype.forEach;
     }
@@ -262,18 +263,26 @@ function HamburgerControl(){
       menuBtn.classList.remove("open"); //to toggle menu button animation
       showNavMenu.classList.remove("show"); // to show nav
     }
-    if (viewportWidth < 500) {
-      offParticles ()
+    function particleSwitch(){
+      if (viewportWidth > 500) {
+        particles ()
+      }else{
+        offParticles ()
+      }
     }
+    particleSwitch()
   }
-    
-    // On resize events, recalculate and log
-    window.addEventListener('resize', function () {
-    logWidth();
-    }, false);
-    
+
+  
+   // On resize events, recalculate and log
+  window.addEventListener('resize', function () {
+    logWidth(); 
+  }, false);
+
+  window.onload =  logWidth(); 
 }
-HamburgerControl()
+
+window.onload = hamburgerControl()
 
 function counterControl(){
 //counters
