@@ -132,6 +132,7 @@ function particles () {
 
 );
 }
+particles()
 /*
 console.log(window.getComputedStyle(document.documentElement).getPropertyValue("--text", "blue"))
 
@@ -227,7 +228,7 @@ return [viewPortWidth, viewPortHeight];
 
 window.onload = getViewport()
 
-
+function HamburgerControl(){
   if(window.NodeList && !NodeList.prototype.forEach){
     NodeList.prototype.forEach = Array.prototype.forEach;
     }
@@ -261,9 +262,7 @@ window.onload = getViewport()
       menuBtn.classList.remove("open"); //to toggle menu button animation
       showNavMenu.classList.remove("show"); // to show nav
     }
-    if (viewportWidth > 500) {
-      particles ()
-    }else{
+    if (viewportWidth < 500) {
       offParticles ()
     }
   }
@@ -273,7 +272,8 @@ window.onload = getViewport()
     logWidth();
     }, false);
     
-
+}
+HamburgerControl()
 
 function counterControl(){
 //counters
