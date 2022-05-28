@@ -299,7 +299,7 @@ function counterRoll() {
 
       if(count < target) {
         counter.innerText = Math.ceil(count + inc);
-        setTimeout(updateCount, 200)
+        setTimeout(updateCount, 1)
       } else{
         count.innerText = target;
       }
@@ -364,8 +364,6 @@ Array.from(button).forEach(function (buttonArray, i) {
   
     headerContainer.classList.remove("nav-fixed-top");
     showNavMenu.style.width = "" ;
-    
-    // location.reload(true);
   });
 }); 
 }
