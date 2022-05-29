@@ -133,7 +133,7 @@ darkModeToggle.addEventListener("click", ()=>{
 */
 
 function changeImg(){
-  var time = 10000;
+  var time = 30000;
   var num = Math.floor(Math.random() * 10) + 1;
   var page2 = document.querySelector("#tsparticles"); 
   page2.style.backgroundImage = `url("./Images/image${num}.JPG")`;
@@ -152,7 +152,7 @@ function typing() {
   }
 }
 
-window.onload = typing()
+typing()
 
 
 
@@ -212,7 +212,7 @@ function hamburgerControl(){
     }
     );
     
-    //if screen width is bigger than 768px close hamburger
+    //if screen width is bigger than 900px close hamburger
     
     var logWidth = function () {
     var viewportWidth;
@@ -237,12 +237,10 @@ function hamburgerControl(){
   window.addEventListener('resize', function () {
     logWidth(); 
   }, false);
-
   window.onload =  logWidth(); 
-
 }
 
-window.onload = hamburgerControl()
+hamburgerControl()
 
 function counterControl(){
 //counters
@@ -279,7 +277,7 @@ intersectionObserver.observe(watcher);
 
 }
 
-window.onload = counterControl()
+counterControl()
 
 
 
