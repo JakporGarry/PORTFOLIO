@@ -133,13 +133,13 @@ darkModeToggle.addEventListener("click", ()=>{
 */
 
 function changeImg(){
-  var time = 30000;
+  var time = 300;
   var num = Math.floor(Math.random() * 10) + 1;
   var page2 = document.querySelector("#tsparticles"); 
   page2.style.backgroundImage = `url("./Images/image${num}.JPG")`;
   setTimeout("changeImg()", time)
 }
-changeImg()
+
 
 
 var text = "Emumejakpor Oghenegare"
@@ -224,9 +224,10 @@ function hamburgerControl(){
     function particleSwitch(){
       if (viewportWidth > 500) {
         tsParticles.load("tsparticles", onParticles);
+      
       }else{
         tsParticles.load("tsparticles", offParticles);
-   
+        
       }
     }
     particleSwitch()
