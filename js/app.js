@@ -1,137 +1,96 @@
+const onParticles = {
 
-function offParticles () {
-  particlesJS('particles-js', 
-  {
-    "particles": {
-      "number": {
-        "value": 0,
-        }
-      }
+interactivity: {
+  events: {
+    onClick: {
+      // this handles the mouse click event
+      enable: true,
+      mode: "push", // this adds particles
+    },
+    onHover: {
+      // this handles the mouse hover event
+      enable: true,
+      mode: "repulse", // this make particles move away from the mouse
+    },
+  },
+  modes: {
+    push: {
+      quantity: 4, // number of particles to add
+    },
+    repulse: {
+      distance: 10, // the distance of the particles from the mouse
+    },
+  },
+},
+
+particles: {
+  number: {
+    value: 300,
+    density: {
+      enable: true,
+      value_area: 400
     }
-  )
-}
-function particles () {
-  particlesJS('particles-js',
-  
-  {
-    "particles": {
-      "number": {
-        "value": 400,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 3,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 8,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 4,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": false,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 1,
-        "direction": "bottom",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 50
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 20
-        }
-      }
-    },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
+  },
+  background: {
+    color: "#000", // the canvas background color
+  },
+  color: {
+    value: "#ffff"
+  },
+  links: {
+    enable: false, // this enables links between particles
+    distance: 150,
+    opacity: 0.4,
+    width: 1
+  },
+  move: {
+    enable: true,
+    speed: 0.5,
+    direction: "bottom",
+    random: false,
+    straight: false,
+    out_mode: "out",
+    attract: {
+      enable: false,
+      rotateX: 600,
+      rotateY: 1200
     }
   }
+,  
+opacity: {
+  value: 3,
+  random: false,
+  anim: {
+    enable: false,
+    speed: 8,
+    opacity_min: 0.1,
+    sync: false
+  }
+},
+  
+  size: {
+    value: 3,
+    random: true,
+    anim: {
+      enable: false,
+      speed: 4,
+      size_min: 0.1,
+      sync: false
+    }
+  }
+},
+};
 
-);
-}
+// tsParticles.load has two parameters, the first one is the id of the container, the second one is an object with the options
+
+const offParticles = {  
+  particles: {
+    number: {
+      value: 0,
+    }
+  },
+};
+
 
 
 /*
@@ -176,12 +135,11 @@ darkModeToggle.addEventListener("click", ()=>{
 function changeImg(){
   var time = 10000;
   var num = Math.floor(Math.random() * 10) + 1;
-  var page2 = document.querySelector("#particles-js"); 
+  var page2 = document.querySelector("#tsparticles"); 
   page2.style.backgroundImage = `url("./Images/image${num}.JPG")`;
   setTimeout("changeImg()", time)
 }
-
-//window.onload = changeImg()
+changeImg()
 
 
 var text = "Emumejakpor Oghenegare"
@@ -265,9 +223,10 @@ function hamburgerControl(){
     }
     function particleSwitch(){
       if (viewportWidth > 500) {
-        particles ()
+        tsParticles.load("tsparticles", onParticles);
       }else{
-        offParticles ()
+        tsParticles.load("tsparticles", offParticles);
+   
       }
     }
     particleSwitch()
@@ -280,6 +239,7 @@ function hamburgerControl(){
   }, false);
 
   window.onload =  logWidth(); 
+
 }
 
 window.onload = hamburgerControl()

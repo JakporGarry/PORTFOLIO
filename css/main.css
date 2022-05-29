@@ -122,7 +122,7 @@ li {
 /*************************************
         BACKGROUND
 **************************************/
-#particles-js {
+#tsparticles {
   background-image: url("../Images/image10.jpg");
   position: fixed;
   top: 0;
