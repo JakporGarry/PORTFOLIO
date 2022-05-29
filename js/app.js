@@ -148,7 +148,7 @@ function typing() {
   if (i < text.length) {
       document.getElementById("text").innerHTML += text.charAt(i);
       i++;
-      setTimeout(typing, 50)
+      setTimeout(typing, 10)
   }
 }
 
