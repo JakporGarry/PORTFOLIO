@@ -378,35 +378,9 @@ li {
 }
 
 .hero .hero-container h1 {
-  font-size: clamp(0.5rem, 2rem + 50vw, 2.5rem);
+  font-size: clamp(0.2rem, 2rem + 50vw, 2.5rem);
   text-align: center;
   color: white;
-  background: url("https://thumbs.dreamstime.com/b/tropical-flower-pattern-seamless-flowers-blossom-flowers-nature-background-vector-illustration-61142748.jpg");
-  background-size: auto 200%;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: shine 8s linear infinite;
-          animation: shine 8s linear infinite;
-}
-
-@-webkit-keyframes shine {
-  from {
-    background-position: center 0;
-  }
-  to {
-    background-position: center 200%;
-  }
-}
-
-@keyframes shine {
-  from {
-    background-position: center 0;
-  }
-  to {
-    background-position: center 200%;
-  }
 }
 
 .hero .hero-container h1,

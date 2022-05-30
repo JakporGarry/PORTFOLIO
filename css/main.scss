@@ -311,25 +311,9 @@ li {
   .hero-container {
     width: 100%;
     h1 {
-      font-size: clamp(0.5rem, 2rem + #{$a}, 2.5rem);
+      font-size: clamp(0.2rem, 2rem + #{$a}, 2.5rem);
       text-align: center;
       color: white;
-      background:url('https://thumbs.dreamstime.com/b/tropical-flower-pattern-seamless-flowers-blossom-flowers-nature-background-vector-illustration-61142748.jpg');
-       background-size: auto 200%;
-      background-clip: text;
-      text-fill-color: transparent;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 8s linear infinite;
-     
-      @keyframes shine {
-        from {
-          background-position: center 0;
-        }
-        to {
-          background-position: center 200%;
-        }
-      }
     }
     h1,
     p,
