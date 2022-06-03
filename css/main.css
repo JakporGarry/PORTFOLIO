@@ -723,7 +723,6 @@ li {
   }
   .section:nth-child(1) {
     margin-bottom: 10vh;
-    max-height: 625px;
   }
 }
 
