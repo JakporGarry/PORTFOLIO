@@ -70,7 +70,7 @@ li {
   border: 1px solid;
   cursor: pointer;
   background-clip: padding-box;
-  backdrop-filter: blur(100em);
+  //backdrop-filter: blur(100em);
   white-space: nowrap;
   position:relative;
   i {
@@ -508,6 +508,64 @@ li {
     }
   }
   
+
+
+
+
+
+
+
+
+
+
+  .header-container .social-icons li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1em;
+  }
+
+  .header-container .social-icons i {
+    color: #fff;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    transition: all 265ms ease-out;
+  }
+
+  .header-container .social-icons a {
+    display: inline-block;
+    &:before {
+      transform: scale(1);
+      content: "";
+      width: 1.875em;
+      height: 1.875em;
+      border-radius: 100%;
+      display: block;
+      background: linear-gradient(45deg, #ff003c, #c648c8);
+      transition: all 265ms ease-out;
+    }
+    &:hover:before {
+      transform: scale(0);
+      transition: all 265ms ease-in;
+    }
+    &:hover i {
+      transform: scale(2.2);
+      //-ms-transform: scale(2.2);
+      //-webkit-transform: scale(2.2);
+      color: #ff003c;
+      background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 265ms ease-in;
+    }
+  }
+
+
+
+/* 
+
   .header-container .social{
   margin-top:1.5em;
   .social-icons{
@@ -550,7 +608,7 @@ li {
     }
   }
 }
- 
+ */
 
 
   /* scrollbar for I.E */

@@ -58,8 +58,6 @@ li {
   border: 1px solid;
   cursor: pointer;
   background-clip: padding-box;
-  -webkit-backdrop-filter: blur(100em);
-          backdrop-filter: blur(100em);
   white-space: nowrap;
   position: relative;
 }
@@ -600,16 +598,13 @@ li {
     border-radius: 10px;
     width: 100%;
   }
-  .header-container .social {
-    margin-top: 1.5em;
-  }
-  .header-container .social .social-icons li {
+  .header-container .social-icons li {
     display: inline-block;
     margin: 0.15em;
     position: relative;
     font-size: 1em;
   }
-  .header-container .social .social-icons i {
+  .header-container .social-icons i {
     color: #fff;
     position: absolute;
     top: 0.5em;
@@ -617,10 +612,10 @@ li {
     -webkit-transition: all 265ms ease-out;
     transition: all 265ms ease-out;
   }
-  .header-container .social .social-icons a {
+  .header-container .social-icons a {
     display: inline-block;
   }
-  .header-container .social .social-icons a:before {
+  .header-container .social-icons a:before {
     -webkit-transform: scale(1);
             transform: scale(1);
     content: "";
@@ -632,21 +627,68 @@ li {
     -webkit-transition: all 265ms ease-out;
     transition: all 265ms ease-out;
   }
-  .header-container .social .social-icons a:hover:before {
+  .header-container .social-icons a:hover:before {
     -webkit-transform: scale(0);
             transform: scale(0);
     -webkit-transition: all 265ms ease-in;
     transition: all 265ms ease-in;
   }
-  .header-container .social .social-icons a:hover i {
+  .header-container .social-icons a:hover i {
     -webkit-transform: scale(2.2);
             transform: scale(2.2);
     color: #ff003c;
     background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-transition: all 265ms ease-in;
     transition: all 265ms ease-in;
   }
+  /* 
+
+  .header-container .social{
+  margin-top:1.5em;
+  .social-icons{
+    li {
+      display: inline-block;
+      margin: 0.15em;
+      position: relative;
+      font-size: 1em;
+    }
+    i {
+      color: #fff;
+      position: absolute;
+      top: 0.5em;
+      left: 0.5em;
+      transition: all 265ms ease-out;
+    }
+    a {
+      display: inline-block;
+      &:before {
+        transform: scale(1);
+        content: "";
+        width: 1.875em;
+        height: 1.875em;
+        border-radius: 100%;
+        display: block;
+        background: linear-gradient(45deg, #ff003c, #c648c8);
+        transition: all 265ms ease-out;
+      }
+      &:hover:before {
+        transform: scale(0);
+        transition: all 265ms ease-in;
+      }
+      &:hover i {
+        transform: scale(2.2);
+        color: #ff003c;
+        background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
+        background-clip: text;
+        transition: all 265ms ease-in;
+      }
+    }
+  }
+}
+ */
   /* scrollbar for I.E */
   .header-container {
     scrollbar-base-color: #201f1f;
