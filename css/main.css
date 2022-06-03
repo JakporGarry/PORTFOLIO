@@ -336,9 +336,8 @@ li {
 /*section layout*/
 .section {
   min-height: 75vh;
-  padding: 2em;
+  padding: 1.5em;
   color: var(--bg-wht);
-  margin-bottom: 5vh;
 }
 
 .section-title {
@@ -443,10 +442,6 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-top: 5vh;
   padding: 0 1em;
 }

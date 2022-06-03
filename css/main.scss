@@ -276,9 +276,8 @@ li {
 /*section layout*/
 .section {
   min-height: 75vh;
-  padding: 2em;
+  padding: 1.5em;
   color: var(--bg-wht);
-  margin-bottom:5vh;
 }
 
 .section-title {
@@ -368,7 +367,6 @@ li {
 }
 .article-content {
   display: flex; // block for mobile fluidity
-  flex-direction: column;
   margin-top: 5vh;
   padding: 0 1em;
 }
