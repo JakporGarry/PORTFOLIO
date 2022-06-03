@@ -1,5 +1,5 @@
 :root {
-  --bg-image: url("../Images/image4.jpg");
+  --bg-image: url("/Images/image7.jpg");
   --text: red;
   --bg-wht: #fff;
   --bg-hover: rgba(235, 25, 110, 1);
@@ -110,20 +110,16 @@ li {
 
 .card {
   background-color: rgba(0, 0, 0, 0.8);
-  -webkit-box-shadow: 5px 8px 2px 0px rgba(0, 0, 0, 0.37);
-          box-shadow: 5px 8px 2px 0px rgba(0, 0, 0, 0.37);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   background-clip: padding-box;
-  -webkit-backdrop-filter: blur(0.1em);
-          backdrop-filter: blur(0.1em);
 }
 
 /*************************************
         BACKGROUND
 **************************************/
 #tsparticles {
-  background-image: url("../Images/image7.jpg");
+  background-image: var(--bg-image);
   position: fixed;
   top: 0;
   left: 0;
