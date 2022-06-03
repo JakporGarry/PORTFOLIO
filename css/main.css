@@ -598,6 +598,9 @@ li {
     border-radius: 10px;
     width: 100%;
   }
+  .header-container .social {
+    margin-top: 1.5em;
+  }
   .header-container .social-icons li {
     display: inline-block;
     margin: 0.15em;
@@ -717,7 +720,6 @@ li {
   }
   .section {
     min-height: 625px;
-    margin-bottom: 2vh;
   }
   .section:nth-child(1) {
     margin-bottom: 10vh;

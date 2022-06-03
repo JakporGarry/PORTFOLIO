@@ -507,18 +507,11 @@ li {
       }
     }
   }
-  
-
-
-
-
-
-
-
-
-
 
   .header-container {
+    .social{
+    margin-top:1.5em;
+    }
     .social-icons {
       li {
     display: inline-block;
@@ -648,7 +641,6 @@ li {
 
   .section {
     min-height: 625px;
-    margin-bottom: 2vh;
   }
   .section:nth-child(1) {
     margin-bottom: 10vh;
