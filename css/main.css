@@ -647,51 +647,6 @@ li {
     -webkit-transition: all 265ms ease-in;
     transition: all 265ms ease-in;
   }
-  /* 
-
-  .header-container .social{
-  margin-top:1.5em;
-  .social-icons{
-    li {
-      display: inline-block;
-      margin: 0.15em;
-      position: relative;
-      font-size: 1em;
-    }
-    i {
-      color: #fff;
-      position: absolute;
-      top: 0.5em;
-      left: 0.5em;
-      transition: all 265ms ease-out;
-    }
-    a {
-      display: inline-block;
-      &:before {
-        transform: scale(1);
-        content: "";
-        width: 1.875em;
-        height: 1.875em;
-        border-radius: 100%;
-        display: block;
-        background: linear-gradient(45deg, #ff003c, #c648c8);
-        transition: all 265ms ease-out;
-      }
-      &:hover:before {
-        transform: scale(0);
-        transition: all 265ms ease-in;
-      }
-      &:hover i {
-        transform: scale(2.2);
-        color: #ff003c;
-        background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
-        background-clip: text;
-        transition: all 265ms ease-in;
-      }
-    }
-  }
-}
- */
   /* scrollbar for I.E */
   .header-container {
     scrollbar-base-color: #201f1f;
@@ -881,9 +836,8 @@ form textarea {
   position: relative;
 }
 
-.portfolio img {
-  height: 100%;
-  width: 100%;
+.portfolio .empty-wrap {
+  visibility: hidden !important;
 }
 
 .portfolio-wrap {
@@ -906,12 +860,21 @@ form textarea {
   border: 0.1px solid #242323;
 }
 
+.portfolio-wrap img {
+  height: 100%;
+  width: 100%;
+}
+
 .portfolio-wrap h1 {
   margin-bottom: 0;
 }
 
 .portfolio-wrap a {
   margin: 1em auto;
+}
+
+.portfolio-wrap .blog {
+  margin-bottom: 1em;
 }
 
 .portfolio-wrap .btn {
@@ -921,6 +884,7 @@ form textarea {
 .portfolio-wrap .btn i {
   margin-left: 0.5em;
   margin-right: 0;
+  font-size: 0.8em;
 }
 
 .counterTab {

@@ -138,6 +138,7 @@ li {
   z-index: 2;
   background-color: var(--bg-trans);
 }
+
 /*************************************
     NAVIGATION BAR
 **************************************/
@@ -560,52 +561,6 @@ li {
   
 
 
-/* 
-
-  .header-container .social{
-  margin-top:1.5em;
-  .social-icons{
-    li {
-      display: inline-block;
-      margin: 0.15em;
-      position: relative;
-      font-size: 1em;
-    }
-    i {
-      color: #fff;
-      position: absolute;
-      top: 0.5em;
-      left: 0.5em;
-      transition: all 265ms ease-out;
-    }
-    a {
-      display: inline-block;
-      &:before {
-        transform: scale(1);
-        content: "";
-        width: 1.875em;
-        height: 1.875em;
-        border-radius: 100%;
-        display: block;
-        background: linear-gradient(45deg, #ff003c, #c648c8);
-        transition: all 265ms ease-out;
-      }
-      &:hover:before {
-        transform: scale(0);
-        transition: all 265ms ease-in;
-      }
-      &:hover i {
-        transform: scale(2.2);
-        color: #ff003c;
-        background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
-        background-clip: text;
-        transition: all 265ms ease-in;
-      }
-    }
-  }
-}
- */
-
 
   /* scrollbar for I.E */
   .header-container {
@@ -768,34 +723,42 @@ form {
   gap: 1em;
   flex-wrap: wrap;
   position: relative;
-  img {
-    height: 100%;
-    width: 100%;
-  }
+  .empty-wrap{
+    visibility:hidden !important;
+ }
 }
 
 .portfolio-wrap {
   display:flex;
   flex-direction: column;
-  flex: 1 1 260px;
-  position: relative;
-  overflow: hidden;
+  flex:1 1 260px;
+  position:relative;
+  overflow:hidden;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.8);
   padding:1em;
   border-radius: 0.5em;
-  border: 0.1px solid rgba(36, 35, 35, 1);
-  h1{
-    margin-bottom: 0;
+  border:0.1px solid rgba(36, 35, 35, 1);
+  
+  img {
+    height: 100%;
+    width: 100%;
   }
-  a {
-    margin: 1em auto;
+  h1{
+    margin-bottom:0;
+  }
+  a{
+    margin:1em auto;
+  }
+  .blog {
+    margin-bottom:1em;
   }
   .btn{
     padding:0.3em 0.5em;
     i{
       margin-left:0.5em;
       margin-right: 0;
+      font-size: 0.8em;
     }
   }
 }

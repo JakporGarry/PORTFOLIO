@@ -133,14 +133,14 @@ darkModeToggle.addEventListener("click", ()=>{
 */
 
 function changeImg(){
-  var time = 300;
+  var time = 300000;
   var num = Math.floor(Math.random() * 10) + 1;
   var page2 = document.querySelector("#tsparticles"); 
-  page2.style.backgroundImage = `url("./Images/image${num}.JPG")`;
-  setTimeout("changeImg()", time)
+    page2.style.backgroundImage = `url("./Images/image${num}.JPG")`;
+   setTimeout("changeImg()", time)
 }
 
-
+changeImg()
 
 var text = "Emumejakpor Oghenegare"
 var i = 0,text;
@@ -221,19 +221,20 @@ function hamburgerControl(){
       menuBtn.classList.remove("open"); //to toggle menu button animation
       showNavMenu.classList.remove("show"); // to show nav
     }
+     //if screen width is bigger than 500 switch off particles background
     function particleSwitch(){
       if (viewportWidth > 500) {
         tsParticles.load("tsparticles", onParticles);
-      
+
       }else{
         tsParticles.load("tsparticles", offParticles);
-        
+    
       }
     }
     particleSwitch()
   }
 
-  
+ 
    // On resize events, recalculate and log
   window.addEventListener('resize', function () {
     logWidth(); 
