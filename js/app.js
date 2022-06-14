@@ -131,7 +131,7 @@ darkModeToggle.addEventListener("click", ()=>{
 
 
 */
-
+//background image
 function changeImg(){
   var time = 300000;
   var num = Math.floor(Math.random() * 10) + 1;
@@ -139,7 +139,6 @@ function changeImg(){
     page2.style.backgroundImage = `url("./Images/image${num}.JPG")`;
    setTimeout("changeImg()", time)
 }
-
 changeImg()
 
 var text = "Emumejakpor Oghenegare"
@@ -151,12 +150,7 @@ function typing() {
       setTimeout(typing, 10)
   }
 }
-
 typing()
-
-
-
-
 
 function getViewport() {
 

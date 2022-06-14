@@ -68,8 +68,8 @@ li {
 }
 
 .btn:hover {
-  -webkit-box-shadow: 0 10px 40px var(--bg-hover);
-          box-shadow: 0 10px 40px var(--bg-hover);
+  -webkit-box-shadow: 0 0px 15px var(--bg-hover);
+          box-shadow: 0 0px 15px var(--bg-hover);
 }
 
 .full-container {
@@ -235,6 +235,8 @@ li {
 
 .navigation .hamburger .menu-btn:hover {
   border-radius: 50%;
+  -webkit-box-shadow: 0 0 15px var(--bg-hover);
+          box-shadow: 0 0 15px var(--bg-hover);
 }
 
 .navigation .hamburger .menu-btn__burger {
@@ -316,8 +318,8 @@ li {
 }
 
 .mobile-nav-menu ul li a:hover {
-  -webkit-box-shadow: 0 10px 40px var(--bg-hover);
-          box-shadow: 0 10px 40px var(--bg-hover);
+  -webkit-box-shadow: 0 0 15px var(--bg-hover);
+          box-shadow: 0 0 15px var(--bg-hover);
   border-radius: 10px;
   margin-left: 25px;
   -webkit-transition: all 0.2s ease-in;
@@ -463,6 +465,9 @@ li {
   .content_inside {
     display: block !important;
   }
+  .content_no {
+    display: block !important;
+  }
   .main {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -543,8 +548,8 @@ li {
     margin-left: 1em;
     border-radius: 50%;
     border: 1px solid var(--bg-wht);
-    -webkit-box-shadow: 0 0 25px var(--bg-hover);
-            box-shadow: 0 0 25px var(--bg-hover);
+    -webkit-box-shadow: 0 0 15px var(--bg-hover);
+            box-shadow: 0 0 15px var(--bg-hover);
   }
   .details h4 {
     font-size: 1.5em;
@@ -593,8 +598,8 @@ li {
     margin-left: 1em;
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    -webkit-box-shadow: 0 0 25px var(--bg-hover);
-            box-shadow: 0 0 25px var(--bg-hover);
+    -webkit-box-shadow: 0 0 15px var(--bg-hover);
+            box-shadow: 0 0 15px var(--bg-hover);
     border-radius: 10px;
     width: 100%;
   }
@@ -774,7 +779,8 @@ li {
 }
 
 .info-box .social-icons i:hover {
-  border: 1px solid var(--bg-hover);
+  -webkit-box-shadow: 0 0 15px var(--bg-hover);
+          box-shadow: 0 0 15px var(--bg-hover);
 }
 
 form {
@@ -836,8 +842,9 @@ form textarea {
   position: relative;
 }
 
-.portfolio .empty-wrap {
+.empty-wrap {
   visibility: hidden !important;
+  height: 0px !important;
 }
 
 .portfolio-wrap {
@@ -916,7 +923,7 @@ form textarea {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20px;
           flex: 1 1 20px;
-  min-width: 99px;
+  min-width: 260px;
   position: relative;
 }
 
@@ -952,9 +959,5 @@ form textarea {
   background: var(--bg-hover);
   border-radius: 50%;
   z-index: 3;
-}
-
-.count-up p {
-  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
