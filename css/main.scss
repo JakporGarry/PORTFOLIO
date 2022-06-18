@@ -285,7 +285,7 @@ li {
 .section-title {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
-  margin-bottom: 1em;
+  margin-bottom: 2.5em;
   h2 {
     font-size: 14px;
     font-weight: 500;
@@ -416,15 +416,15 @@ li {
 /*************************************
     SERVICES 
 **************************************/
-#services i{
-color:var(--bg-hover)
+#services li i{
+ color:var(--bg-hover)
 }
 
 /*************************************
     PORTFOLIO
 **************************************/
 .section {
-  margin-bottom: 100vh;
+  margin-bottom: 10vh;
 }
 .portfolio {
   display: flex;
