@@ -30,6 +30,7 @@
 html,
 body {
   font-size: var(--ff-400);
+  font-weight: 400;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -335,6 +336,7 @@ li {
   padding: 1.5em;
   color: var(--bg-wht);
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .section-title {
@@ -379,6 +381,7 @@ li {
   font-size: clamp(0.2rem, 2rem + 50vw, 2.5rem);
   text-align: center;
   color: white;
+  line-height: normal;
 }
 
 .hero .hero-container h1,
@@ -500,6 +503,12 @@ li {
     SERVICES 
 **************************************/
 #services li i {
+  color: var(--bg-hover);
+}
+
+#services h1 {
+  padding: 0;
+  margin: 0;
   color: var(--bg-hover);
 }
 

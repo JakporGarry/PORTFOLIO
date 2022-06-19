@@ -17,6 +17,7 @@
 
   --font-size: 14.9254vw;
 
+
   --font-sm: 16px;
   --font-md: 20px;
   --font-lg: 30px;
@@ -42,7 +43,9 @@ $a: 50vw;
 
 html,
 body {
+  //font-family: "open sans", sans-serif;;
   font-size: var(--ff-400);
+  font-weight: 400;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -280,6 +283,7 @@ li {
   padding: 1.5em;
   color: var(--bg-wht);
   margin-bottom: 20px;
+  line-height:1.5;
 }
 
 .section-title {
@@ -317,6 +321,7 @@ li {
       font-size: clamp(0.2rem, 2rem + #{$a}, 2.5rem);
       text-align: center;
       color: white;
+      line-height: normal;
     }
     h1,
     p,
@@ -419,7 +424,11 @@ li {
 #services li i{
  color:var(--bg-hover)
 }
-
+#services h1 {
+  padding: 0;
+  margin: 0;
+  color:var(--bg-hover)
+}
 /*************************************
     PORTFOLIO
 **************************************/
