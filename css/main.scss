@@ -361,6 +361,16 @@ li {
   a {
     margin: 1em;
   }
+  .tools{ 
+    padding: 10px;
+    margin-top:2em;
+    i{
+      flex: 1 1 40px;
+      font-size: 40px;
+      color: var(--bg-hover);
+
+    }
+  }
 }
 
 /*************************************
@@ -385,7 +395,6 @@ li {
   border-radius: 10px;
   flex: 1 1 20px;
   min-width:260px;
-  position: relative;
   > div {
     margin-top: 2em;
   }
@@ -404,7 +413,7 @@ li {
     background: inherit;
     border: 1px solid rgba(255, 255, 255, 0.35);
   }
-  i {
+  i, img{
     font-size: 25px;
     position: absolute;
     top: -30px;
@@ -415,6 +424,11 @@ li {
     background: var(--bg-hover);
     border-radius: 50%;
     z-index: 3;
+  }
+  img{
+    height: 50px !important;
+    width:50px !important;
+    padding: 0 !important;
   }
 }
 
@@ -799,7 +813,10 @@ LARGER SCREENS
     min-height: 625px;
     margin-bottom: 10vh;
   }
-  
+  .slider-container{
+    max-width: calc(450px - var(--mg-calc)) !important;
+    
+  }
 }
 
   [id] {
@@ -811,10 +828,23 @@ LARGER SCREENS
   .counterTab{
      flex-direction: column;
   }
+  .about{
   .about-content{
     flex-direction: column;
     gap:0em;
   }
+  .tools{ 
+    
+    margin-top:2em;
+    i{
+      flex: 1 1 20px;
+      font-size: 30px;
+      color: var(--bg-hover);
+
+    }
+  }
+}
+
   .hero {
     .hero-container {
       h1 {
@@ -836,6 +866,9 @@ LARGER SCREENS
   .split > *{
     flex-basis:100%;
   } 
+  .slider-container{
+    max-width: calc(900px - var(--mg-calc)) !important;
+  }
 }
 
 @media screen and (min-width: 1930px) {
