@@ -335,8 +335,8 @@ li {
   min-height: 75vh;
   padding: 1.5em;
   color: var(--bg-wht);
-  margin-bottom: 20px;
   line-height: 1.5;
+  margin-bottom: 10vh;
 }
 
 .section-title {
@@ -533,10 +533,6 @@ li {
 /*************************************
     PORTFOLIO
 **************************************/
-.section {
-  margin-bottom: 10vh;
-}
-
 .portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,10 +570,11 @@ li {
   padding: 1em;
   border-radius: 0.5em;
   border: 0.1px solid #242323;
+  min-height: 100%;
 }
 
 .portfolio-wrap img {
-  height: 100%;
+  min-height: 150px;
   width: 100%;
 }
 
@@ -587,6 +584,20 @@ li {
 
 .portfolio-wrap a {
   margin: 1em auto;
+  background: green;
+}
+
+.portfolio-wrap #more {
+  display: none;
+}
+
+.portfolio-wrap #dots {
+  cursor: default;
+  color: wheat;
+}
+
+.portfolio-wrap #dots:hover {
+  color: --var(--bg-hover);
 }
 
 .portfolio-wrap .blog {

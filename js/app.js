@@ -17,6 +17,7 @@ interactivity: {
     push: {
       quantity: 4, // number of particles to add
     },
+                                  
     repulse: {
       distance: 10, // the distance of the particles from the mouse
     },
@@ -323,3 +324,23 @@ Array.from(button).forEach(function (buttonArray, i) {
 }
 
 MobileMenuChange()
+
+
+function readMore() {
+  var dots = document.querySelectorAll("#dots");
+  var moreText = document.querySelectorAll("#more");
+  dots[0].style.backgroundColor = "red"; 
+  moreText[0].style.backgroundColor = "blue"; 
+  dots.addEventListener('click', function() {
+    if (dots.style.display === "block") {
+      dots.style.display = "inline";
+      dots.innerHTML = "... Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "block";
+      dots.innerHTML = "... Read less"; 
+      moreText.style.display = "inline";
+    }
+  })
+}
+readMore() 
